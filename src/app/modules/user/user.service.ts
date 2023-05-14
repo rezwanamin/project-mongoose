@@ -20,4 +20,9 @@ import { User } from "./user.model";
       });
       await user.save();
       return user;
+  };
+
+  export const getUsersFromDB = async () =>{
+    const users = await User.find();
+    return users;
   }
