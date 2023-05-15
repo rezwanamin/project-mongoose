@@ -5,6 +5,9 @@ import { User } from "./user.model";
  export const createUserToDB = async (payload:IUser):Promise<IUser> =>{
     const user = new User(payload);
       await user.save();
+      const fullName = user.getFullName();
+      const role = user.getRole();
+      console.log(`Welcome ${fullName} as ${role}!`);
       return user;
   };
 

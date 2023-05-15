@@ -16,3 +16,8 @@
     presentAddress: string;
     permanentAddress: string;
 };
+
+export interface IUserMethods{
+    getFullName():string;
+    getRole():string
+}
